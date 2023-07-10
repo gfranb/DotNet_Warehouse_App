@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="netAssistantsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Conductor">
+    <Key>
+      <PropertyRef Name="id_conductor" />
+    </Key>
+    <Property Name="id_conductor" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="apellidos" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="domicilio" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="permiso" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="disponibilidad" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Ruta">
+    <Key>
+      <PropertyRef Name="id_ruta" />
+    </Key>
+    <Property Name="id_ruta" Type="Int32" Nullable="false" />
+    <Property Name="origen_ruta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="destino_ruta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="repostar_gasolina" Type="Boolean" />
+    <Property Name="fecha_ruta" Type="DateTime" Precision="0" />
+    <Property Name="duracion" Type="DateTime" Precision="0" />
+    <Property Name="precio_repostaje" Type="Double" />
+    <Property Name="kms_ruta" Type="Double" />
+  </EntityType>
+  <EntityType Name="Mercancia">
+    <Key>
+      <PropertyRef Name="id_producto" />
+    </Key>
+    <Property Name="id_producto" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="volumenProducto" Type="Double" />
+  </EntityType>
+  <EntityType Name="Vehiculo">
+    <Key>
+      <PropertyRef Name="id_vehiculo" />
+    </Key>
+    <Property Name="id_vehiculo" Type="Int32" Nullable="false" />
+    <Property Name="marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tipoVehiculo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="disponibilidadVehiculo" Type="Boolean" />
+    <Property Name="volumenGasolina" Type="Double" />
+    <Property Name="estado" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="netAssistantsEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Conductors" EntityType="Self.Conductor" />
+    <EntitySet Name="Rutas" EntityType="Self.Ruta" />
+    <EntitySet Name="Mercancias" EntityType="Self.Mercancia" />
+    <EntitySet Name="Vehiculoes" EntityType="Self.Vehiculo" />
+  </EntityContainer>
+</Schema>

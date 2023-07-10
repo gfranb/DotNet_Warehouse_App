@@ -1,0 +1,18 @@
+<Lista>
+  <Conductor>
+    <id_conductor>1</id_conductor>
+    <nombre>Marc</nombre>
+    <apellido>Parra</apellido>
+    <domicilio>Barcelona</domicilio>
+    <permiso>A</permiso>
+    <disponibilidad>false</disponibilidad>
+  </Conductor>
+  <Conductor>
+    <id_conductor>2</id_conductor>
+    <nombre>Gianfranco</nombre>
+    <apellido>Bonanno</apellido>
+    <domicilio>Barcelona</domicilio>
+    <permiso>A</permiso>
+    <disponibilidad>false</disponibilidad>
+  </Conductor>
+</Lista>

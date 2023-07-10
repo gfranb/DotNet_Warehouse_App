@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="netAssistantsModelStoreContainer" CdmEntityContainer="netAssistantsEntities3">
+    <EntitySetMapping Name="Conductors">
+      <EntityTypeMapping TypeName="netAssistantsModel.Conductor">
+        <MappingFragment StoreEntitySet="Conductor">
+          <ScalarProperty Name="id_conductor" ColumnName="id_conductor" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="permiso" ColumnName="permiso" />
+          <ScalarProperty Name="disponibilidad" ColumnName="disponibilidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rutas">
+      <EntityTypeMapping TypeName="netAssistantsModel.Ruta">
+        <MappingFragment StoreEntitySet="Ruta">
+          <ScalarProperty Name="id_ruta" ColumnName="id_ruta" />
+          <ScalarProperty Name="origen_ruta" ColumnName="origen_ruta" />
+          <ScalarProperty Name="destino_ruta" ColumnName="destino_ruta" />
+          <ScalarProperty Name="repostar_gasolina" ColumnName="repostar_gasolina" />
+          <ScalarProperty Name="fecha_ruta" ColumnName="fecha_ruta" />
+          <ScalarProperty Name="duracion" ColumnName="duracion" />
+          <ScalarProperty Name="precio_repostaje" ColumnName="precio_repostaje" />
+          <ScalarProperty Name="kms_ruta" ColumnName="kms_ruta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mercancias">
+      <EntityTypeMapping TypeName="netAssistantsModel.Mercancia">
+        <MappingFragment StoreEntitySet="Mercancia">
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="volumenProducto" ColumnName="volumenProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehiculoes">
+      <EntityTypeMapping TypeName="netAssistantsModel.Vehiculo">
+        <MappingFragment StoreEntitySet="Vehiculo">
+          <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="tipoVehiculo" ColumnName="tipoVehiculo" />
+          <ScalarProperty Name="disponibilidadVehiculo" ColumnName="disponibilidadVehiculo" />
+          <ScalarProperty Name="volumenGasolina" ColumnName="volumenGasolina" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

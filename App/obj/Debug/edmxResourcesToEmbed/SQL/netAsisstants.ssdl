@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="netAssistantsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Conductor">
+    <Key>
+      <PropertyRef Name="id_conductor" />
+    </Key>
+    <Property Name="id_conductor" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="10" />
+    <Property Name="apellidos" Type="varchar" MaxLength="20" />
+    <Property Name="domicilio" Type="varchar" MaxLength="15" />
+    <Property Name="permiso" Type="varchar" MaxLength="10" />
+    <Property Name="disponibilidad" Type="bit" />
+  </EntityType>
+  <EntityType Name="Mercancia">
+    <Key>
+      <PropertyRef Name="id_producto" />
+    </Key>
+    <Property Name="id_producto" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="volumenProducto" Type="float" />
+  </EntityType>
+  <EntityType Name="Ruta">
+    <Key>
+      <PropertyRef Name="id_ruta" />
+    </Key>
+    <Property Name="id_ruta" Type="int" Nullable="false" />
+    <Property Name="origen_ruta" Type="varchar" MaxLength="50" />
+    <Property Name="destino_ruta" Type="varchar" MaxLength="50" />
+    <Property Name="repostar_gasolina" Type="bit" />
+    <Property Name="fecha_ruta" Type="date" />
+    <Property Name="duracion" Type="date" />
+    <Property Name="precio_repostaje" Type="float" />
+    <Property Name="kms_ruta" Type="float" />
+  </EntityType>
+  <EntityType Name="Vehiculo">
+    <Key>
+      <PropertyRef Name="id_vehiculo" />
+    </Key>
+    <Property Name="id_vehiculo" Type="int" Nullable="false" />
+    <Property Name="marca" Type="varchar" MaxLength="50" />
+    <Property Name="tipoVehiculo" Type="varchar" MaxLength="50" />
+    <Property Name="disponibilidadVehiculo" Type="bit" />
+    <Property Name="volumenGasolina" Type="float" />
+    <Property Name="estado" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="netAssistantsModelStoreContainer">
+    <EntitySet Name="Conductor" EntityType="Self.Conductor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ruta" EntityType="Self.Ruta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mercancia" EntityType="Self.Mercancia" store:Type="Tables" />
+    <EntitySet Name="Vehiculo" EntityType="Self.Vehiculo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
